@@ -21,9 +21,10 @@ displayBanner() {
  | |_) / ___ \ ___) |  _  |   <| | | (_| |\ V  V /| |  __/ |   
  |____/_/   \_\____/|_| |_|_|\_\_|  \__,_| \_/\_/ |_|\___|_|   
 
-Bash web crawler for gathering URLs by matching a pattern word as optional argument and by html parsing in source code or / and by parsing the found JavaScript links at a target domain
+Bash Web Crawler to find URLs by parsing the HTML source code and the found javascript links at homepage of a required specific website domain
 
-Coded by:@torsh4rk
+
+Coded by: @torsh4rk
 
 \n${Yellow}# Settings \n\n## Domain (target): $DOMAIN\n## Random User-Agent: $USER_AGENT\n
 """                                                               
@@ -52,7 +53,7 @@ findURLs(){
 }
 
 
-# JS link finder - find js directories or js file links at target domain and make parsing in all them.
+# JS link finder - find js directories or js file links at target domain and make parsing the all them.
 # Make parsing to find other URLs within js links and extract this URLs by using (or without using) a pattern word as optional argument
 # Checking if argument PATTERN is empty or not empty.
 jsLinkParser(){
@@ -78,8 +79,8 @@ jsLinkParser(){
 Menu(){
 
     echo -e "${Yellow}How do you wish to make the web crawling on target domain $DOMAIN ?\n"
-    echo -e "[ 1 ] parsing in HTML source"
-    echo -e "[ 2 ] By parsing in found Javascript links"
+    echo -e "[ 1 ] parsing the HTML source code of homepage"
+    echo -e "[ 2 ] By parsing the found Javascript links at homepage"
     echo -e "[ 3 ] Make a full web crawling (Run the option 1 and 2)"
     echo -e "[ 4 ] Exit"
     echo -e "\n"
@@ -87,14 +88,14 @@ Menu(){
     echo -e "\n"
     case $chosen_option in
         "1")
-            [[ -n "$PATTERN" ]] && echo -e "\n\n${Yellow}[*] Finding URLs by html parsing in source code at $DOMAIN and matching the word \"$PATTERN\" \n\n" && findURLs $PATTERN || echo -e "\n\n${Yellow}[*] Finding URLs html parsing in source code at $DOMAIN \n\n" && findURLs
+            [[ -n "$PATTERN" ]] && echo -e "\n\n${Yellow}[*] Finding URLs by parsing the HTML source code of homepage from $DOMAIN and matching the word \"$PATTERN\" \n\n" && findURLs $PATTERN || echo -e "\n\n${Yellow}[*] Finding URLs by parsing the HTML source code of homepage from $DOMAIN \n\n" && findURLs
             ;;
         "2")
-            [[ -n "$PATTERN" ]] && echo -e "\n\n${Yellow}[*] Finding URLs by parsing at JS files at domain $DOMAIN matching the word \"$PATTERN\" \n\n" && jsLinkParser $PATTERN || echo -e "\n\n${Yellow}[*] Finding URLs by parsing in found JS links at domain $DOMAIN \n\n" && jsLinkParser
+            [[ -n "$PATTERN" ]] && echo -e "\n\n${Yellow}[*] Finding URLs by parsing the found JS links at homepage from $DOMAIN matching the word \"$PATTERN\" \n\n" && jsLinkParser $PATTERN || echo -e "\n\n${Yellow}[*] Finding URLs by parsing the found JS links at homepage from $DOMAIN \n\n" && jsLinkParser
             ;;
         "3")
-            [[ -n "$PATTERN" ]] && echo -e "\n\n${Yellow}[*] Finding URLs by html parsing in source code at $DOMAIN and matching the word \"$PATTERN\" \n\n" && findURLs $PATTERN || echo -e "\n\n${Yellow}[*] Finding URLs html parsing in source code at $DOMAIN \n\n" && findURLs
-            [[ -n "$PATTERN" ]] && echo -e "\n\n${Yellow}[*] Finding URLs by parsing at JS files at domain $DOMAIN matching the word \"$PATTERN\" \n\n" && jsLinkParser $PATTERN || echo -e "\n\n${Yellow}[*] Finding URLs by parsing in found JS links at domain $DOMAIN \n\n" && jsLinkParser
+            [[ -n "$PATTERN" ]] && echo -e "\n\n${Yellow}[*] Finding URLs by parsing the HTML source code of homepage from $DOMAIN and matching the word \"$PATTERN\" \n\n" && findURLs $PATTERN || echo -e "\n\n${Yellow}[*] Finding URLs by parsing the HTML source code of homepage from $DOMAIN \n\n" && findURLs
+            [[ -n "$PATTERN" ]] && echo -e "\n\n${Yellow}[*] Finding URLs by parsing the found JS links at homepage from $DOMAIN matching the word \"$PATTERN\" \n\n" && jsLinkParser $PATTERN || echo -e "\n\n${Yellow}[*] Finding URLs by parsing the found JS links at homepage from $DOMAIN \n\n" && jsLinkParser
             ;;
         "4")
             echo -e "${Red}\n\n Bye! \nExiting... \n\n"
