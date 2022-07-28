@@ -1,9 +1,9 @@
 # BASHkrawler
 
 ## 1. Description
-```
+
 Bash web crawler for gathering URLs by matching a pattern word as optional argument and by html parsing in source code or / and by parsing the found JavaScript links at a target domain
-```
+
 
 ## 2. Example usage
 <br>
