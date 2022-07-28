@@ -13,6 +13,8 @@ Bash web crawler for gathering URLs by matching a pattern word as optional argum
     <i><b>Fig.1  -  </b>Displaying banner</i>
 </p>
 
+<br/>
+
 ### 2.1. Making HTML parsing without using a pattern word to match
 
 <p align = "center">
