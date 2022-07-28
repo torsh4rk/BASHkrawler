@@ -4,6 +4,7 @@
 
 Bash web crawler for gathering URLs by matching a pattern word as optional argument and by html parsing in source code or / and by parsing the found JavaScript links at a target domain
 
+<br/>
 
 ## 2. Usage
 
@@ -16,34 +17,38 @@ Bash web crawler for gathering URLs by matching a pattern word as optional argum
 
 <p align = "center">
     <img src="images/02.png" style="width:100%">
-    <i><b>Fig.2  -  </b>Chosing the option 1 to find all URLs at target domain www.nasa.gov via HTML parsing</i>
+    <i><b>Fig.2  -  </b>Chosing the option 1 to find all URLs at target domain <i>www.nasa.gov</i> via HTML parsing</i>
 </p>
 
 <p align = "center">
     <img src="images/03.png" style="width:100%">
-    <i><b>Fig.3  -  </b>Finding all URLs at target domain www.nasa.gov via HTML parsing</i>
+    <i><b>Fig.3  -  </b>Finding all URLs at target domain <i>www.nasa.gov</i> via HTML parsing</i>
 </p>
+
+<br/>
 
 ### 2.2. Finding all JS links at target domain and parsing them without using a pattern word to match
 
-
 <p align = "center">
     <img src="images/04.png" style="width:100%">
-    <i><b>Fig.4  -  </b>Chosing the option 2 to find all JS links at target domain www.nasa.gov and extract all URLs from this found JS links</i>
+    <i><b>Fig.4  -  </b>Chosing the option 2 to find all JS links at target domain <i>www.nasa.gov</i> and extract all URLs from this found JS links</i>
 </p>
 
+<br/>
 
 ### 2.3. Making a full web crawling by running the option 1 and 2 without using a pattern word to match
 
 <p align = "center">
     <img src="images/05.png" style="width:100%">
-    <i><b>Fig.5  -  </b>Chosing the option 3 to find all URLs at target domain www.nasa.gov via option 1 and 2 without using a pattern word to match</i>
+    <i><b>Fig.5  -  </b>Chosing the option 3 to find all URLs at target domain <i>www.nasa.gov</i> via option 1 and 2 without using a pattern word to match</i>
 </p>
 
 <p align = "center">
     <img src="images/06.png" style="width:100%">
-    <i><b>Fig.6  -  </b>Finishing the full web crawling at target domain www.nasa.gov</i>
+    <i><b>Fig.6  -  </b>Finishing the full web crawling at target domain <i>www.nasa.gov</i></i>
 </p>
+
+<br/>
 
 ### 2.4. Making HTML parsing by using a pattern word to match
 
@@ -54,16 +59,17 @@ Bash web crawler for gathering URLs by matching a pattern word as optional argum
 
 <p align = "center">
     <img src="images/08.png" style="width:100%">
-    <i><b>Fig.8  -  </b>Chosing the option 3 to find all URLs with the word "nasa" at target domain www.nasa.gov via option 1 and 2</i>
+    <i><b>Fig.8  -  </b>Chosing the option 3 to find all URLs with the word "nasa" at target domain <i>www.nasa.gov</i> via option 1 and 2</i>
 </p>
 
 <p align = "center">
     <img src="images/09.png" style="width:100%">
-    <i><b>Fig.9  -  </b>Finishing the full web crawling at target domain www.nasa.gov by using the word ".nasa"</i>
+    <i><b>Fig.9  -  </b>Finishing the full web crawling at target domain <i>www.nasa.gov</i> by using the word ".nasa"</i>
 </p>
 
+<br/>
 
 ## 3. References
 
-<a>https://medium.com/netcoders/web-scraping-e-web-crawler-introdu%C3%A7%C3%A3o-e-passos-iniciais-8f846876292a</a>
-<a>https://medium.datadriveninvestor.com/what-is-a-web-crawler-and-how-does-it-work-b9e9c2e4c35d</a>
+<a>https://medium.datadriveninvestor.com/what-is-a-web-crawler-and-how-does-it-work-b9e9c2e4c35d</a><br/>
+<a>https://medium.com/@disruptive.dna/shell-scripting-the-awk-way-to-web-scraping-and-other-tasks-b19baaa89436</a><br/>
