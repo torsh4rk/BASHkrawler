@@ -2,11 +2,19 @@
 
 ## 1. Description
 
-Bash web crawler for gathering URLs by matching a pattern word as optional argument and by html parsing in source code or / and by parsing the found JavaScript links at a target domain
+Bash Web Crawler to find URLs by parsing the HTML source code and the found javascript links on homepage of a required specific website domain. It is also possible to use a pattern word as optional argument to customize the URLs extraction.
 
 <br/>
 
-## 2. Usage
+## 2. Install
+
+```
+git clone https://github.com/torsh4rk/BASHkrawler.git
+cd BASHkrawler && chmod +x bashkrawler.sh
+./bashkrawler.sh
+```
+
+## 3. Example Usage
 
 <p align = "center">
     <img src="images/01.png" style="width:100%">
@@ -15,7 +23,7 @@ Bash web crawler for gathering URLs by matching a pattern word as optional argum
 
 <br/>
 
-### 2.1. Making HTML parsing without using a pattern word to match
+### 3.1. Making HTML parsing without using a pattern word to match
 
 <p align = "center">
     <img src="images/02.png" style="width:100%">
@@ -29,7 +37,7 @@ Bash web crawler for gathering URLs by matching a pattern word as optional argum
 
 <br/>
 
-### 2.2. Finding all JS links at target domain and parsing them without using a pattern word to match
+### 3.3. Finding all JS links at target domain and parsing them without using a pattern word to match
 
 <p align = "center">
     <img src="images/04.png" style="width:100%">
@@ -38,7 +46,7 @@ Bash web crawler for gathering URLs by matching a pattern word as optional argum
 
 <br/>
 
-### 2.3. Making a full web crawling by running the option 1 and 2 without using a pattern word to match
+### 3.3. Making a full web crawling by running the option 1 and 2 without using a pattern word to match
 
 <p align = "center">
     <img src="images/05.png" style="width:100%">
@@ -52,7 +60,7 @@ Bash web crawler for gathering URLs by matching a pattern word as optional argum
 
 <br/>
 
-### 2.4. Making HTML parsing by using a pattern word to match
+### 3.4. Making HTML parsing by using a pattern word to match
 
 <p align = "center">
     <img src="images/07.png" style="width:100%">
@@ -71,6 +79,6 @@ Bash web crawler for gathering URLs by matching a pattern word as optional argum
 
 <br/>
 
-## 3. References
+## 4. References
 
 <a>https://medium.datadriveninvestor.com/what-is-a-web-crawler-and-how-does-it-work-b9e9c2e4c35d</a><br/>
