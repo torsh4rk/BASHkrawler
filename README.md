@@ -9,9 +9,9 @@ Bash Web Crawler to find URLs by parsing the HTML source code and the found java
 ## 2. Install
 
 ```
-git clone https://github.com/torsh4rk/BASHkrawler.git
-cd BASHkrawler && chmod +x bashkrawler.sh
-./bashkrawler.sh
+➜ git clone https://github.com/torsh4rk/BASHkrawler.git
+➜ cd BASHkrawler && chmod +x bashkrawler.sh
+➜ ./bashkrawler.sh
 ```
 
 ## 3. Example Usage
