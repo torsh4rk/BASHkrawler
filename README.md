@@ -10,7 +10,7 @@ Bash Web Crawler to find URLs by parsing the HTML source code and the found java
 
 ```
 ➜ git clone https://github.com/torsh4rk/BASHkrawler.git
-➜ cd BASHkrawler && chmod +x bashkrawler.sh
+➜ cd BASHkrawler/ && chmod +x bashkrawler.sh
 ➜ ./bashkrawler.sh
 ```
 
