@@ -2,7 +2,7 @@
 
 ## 1. Description
 
-Bash Web Crawler to find URLs by parsing the HTML source code and the found javascript links on homepage of a required specific website domain. It is also possible to use a pattern word as optional argument to customize the URLs extraction.
+Bash web crawler for gathering URLs by matching a pattern word as optional argument and by html parsing in source code or / and by parsing the found JavaScript links at a target domain
 
 <br/>
 
