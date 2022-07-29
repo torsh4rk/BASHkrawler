@@ -12,6 +12,7 @@ Yellow='\033[0;33m'       # Yellow
 NC='\033[0m'              # No Color
 
 
+
 # display banner
 displayBanner() {
     echo -e """${Yellow}
@@ -37,14 +38,14 @@ Coded by: @torsh4rk
 # Checking if argument PATTERN is empty or not empty.
 findURLs(){
 
-    for URLs in $(curl -k -s -L -H "User-Agent: $USER_AGENT" "https://$DOMAIN" | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*"* | sort -u); 
+    for URLs in $(curl -k -s -L --proto =http,https -H "User-Agent: $USER_AGENT" "$DOMAIN" | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*"* | sort -u); 
     do
         if [[ -z "$PATTERN" ]]; then
             URL=$(echo "$URLs")
         elif [[ ! -z "$PATTERN" ]]; then
             URL=$(echo "$URLs" | grep "$PATTERN")
         fi
-        STATUS_CODE=$(curl -k -s -L -H "$USER_AGENT" "$URL" --write-out %{http_code} --output /dev/null)
+        STATUS_CODE=$(curl -k -s -L --proto =http,https -H "$USER_AGENT" "$URL" --write-out %{http_code} --output /dev/null)
         if [[ -n "$URL" ]] && [[ "$STATUS_CODE" -ne 404 ]]; then
             FOUND_URLs="$URL"
             echo -e "${Green} $FOUND_URLs"
@@ -58,11 +59,11 @@ findURLs(){
 # Checking if argument PATTERN is empty or not empty.
 jsLinkParser(){
 
-    for URLs in $(curl -k -s -L -H "User-Agent: $USER_AGENT" "https://$DOMAIN" | grep -Eo "(http|https)://([a-zA-Z0-9./?=&,{};_-]+)*"* | sort -u); 
+    for URLs in $(curl -k -s -L --proto =http,https -H "User-Agent: $USER_AGENT" "$DOMAIN" | grep -Eo "(http|https)://([a-zA-Z0-9./?=&,{};_-]+)*"* | sort -u); 
     do
         jsLink=$(echo "$URLs" | grep ".js")
         if [[ -n "$jsLink" ]]; then
-            jsParser=$(curl -k -s -L -H "User-Agent: $USER_AGENT" "$jsLink" | grep -Eo "(http|https)://([a-zA-Z0-9./?=&,{};_-]+)*"* | sort -u);
+            jsParser=$(curl -k -s -L --proto =http,https -H "User-Agent: $USER_AGENT" "$jsLink" | grep -Eo "(http|https)://([a-zA-Z0-9./?=&,{};_-]+)*"* | sort -u);
             if [[ -n "$jsParser" ]] && [[ -z "$PATTERN" ]]; then
                 echo -e "\n${Green}[*] Found JS Link: $jsLink\n\n${NC}JS Parsing:\n\n$jsParser" 
             elif [[ -n "$jsParser" ]] && [[ ! -z "$PATTERN" ]]; then
